@@ -1,0 +1,13 @@
+@startuml = startuml
+
+skinparam ClassAttributeIconSize 0
+
+class AlatTulis {
+    - nama        : String
+    - stock       : String
+    - hargaSatuan : String
+
+    + void tampilkanDetail()
+}
+
+@enduml

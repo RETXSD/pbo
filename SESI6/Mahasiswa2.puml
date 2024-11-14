@@ -1,0 +1,24 @@
+@startuml = startuml
+
+skinparam ClassAttributeIconSize 0 
+
+Class Mahasiswa2 {
+    - nama : String 
+    - nim : String 
+    - usia : int 
+    - jurusan : Jurusan1 
+
+    + void displayInfo()
+
+}
+
+Class Jurusan1 {
+    - nama : String 
+    - kode : String 
+
+    + void displayInfo()
+}
+
+    Mahasiswa2 --> Jurusan1 : memiliki
+
+@enduml

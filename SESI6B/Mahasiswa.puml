@@ -1,0 +1,38 @@
+@startuml
+skinparam ClassAttributeIconSize 0 
+
+Class Mahasiswa {
+    - nama : String
+    - nim : String
+    - usia : int
+    - dosenWali : Dosen
+    - mataKuliahList : List <MataKuliah>
+    
+    + void addMatakuliah()
+    + void displayInfo()
+}
+
+Class Dosen {
+    - nama : String
+    - nip : String
+    - mahasiswaWaliList : List<Mahasiswa> 
+
+    + void tambahMahasiswa()
+    + void displayInfo()
+}
+
+Class MataKuliah { 
+    - nama : String
+    - kode : String
+    - mahasiswaList : List<Mahasiswa> 
+
+    + void addMahasiswa()
+    + void displayInfo()
+}
+
+Mahasiswa --> Dosen : "Dosen Wali"
+Mahasiswa --> MataKuliah : "mengambil"
+MataKuliah --> Mahasiswa : "mahasiswa terdaftar"
+Dosen --> Mahasiswa : "membimbing"
+
+@enduml

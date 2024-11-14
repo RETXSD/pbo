@@ -1,0 +1,14 @@
+@startuml = startuml
+
+skinparam ClassAttributeIconSize 0
+
+class Mahasiswa1{
+    - String : nama 
+    - String : nim 
+    - int    : usia
+   
+    + void displayInfo()
+    
+}
+
+@enduml 

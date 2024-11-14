@@ -1,0 +1,11 @@
+@startuml = startuml
+skinparam ClassAttributeIconSize 0 
+
+class Hewan{
+    - nama : String
+    - jenis : String
+
+    + void displayInfo()
+}
+
+@enduml 

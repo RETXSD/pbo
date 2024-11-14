@@ -1,0 +1,34 @@
+@startuml
+skinparam ClassAttributeIconSize 0 
+
+Class Mahasiswa3 {
+    - nama : String
+    - nim : String
+    - usia : int
+    - jurusan : Jurusan1
+    - kelasList : List <Kelas>
+    
+    + void displayInfo()
+}
+
+Class Jurusan1 {
+    - nama : String
+    - kode : String
+    
+    + void displayInfo()
+}
+
+Class Kelas {
+    - namaKelas : String
+    - kodeKelas : String
+    - mahasiswaList : List<Mahasiswa3>
+    
+    + void addMahasiswa()
+    + void displayInfo()
+}
+
+Mahasiswa3 --> Jurusan1 : "memiliki"
+Mahasiswa3 --> Kelas : "mengikuti"
+Kelas --> Mahasiswa3 : "memiliki"
+
+@enduml
